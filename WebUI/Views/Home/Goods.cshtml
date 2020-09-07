@@ -1,0 +1,95 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Goods</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="~/Home/Index" title="Перейти на главную"><span>Game</span>shop</a>
+        </div>
+        <div id="menuHead">
+            <a class="buttonA" style="width:72px;" href="~/Home/About">
+                О нас
+            </a>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="leftCol">
+            <h3 >Товары</h3>
+            <br />
+
+                        <table style="position:absolute;left:0px;width:300px;">
+                            <thead>
+                                <tr>
+                                    <td>Действие</td>
+                                    <td>Название</td>
+                                    <td>Год издания</td>
+                                    <td>Цена</td>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @{
+
+                                    foreach (var c in ViewBag.Characteristics)
+                                    {
+                                        <tr>
+                                            <td><input class="buttonA" type="submit" name="name" value="Изменить" /></td>
+                                            <td>@c.Name</td>
+                                            <td>@c.Year</td>
+                                            <td>@c.SellingPrice</td>
+                                            
+                                        </tr>
+                                    }
+
+                                }
+
+                            </tbody>
+                        </table>
+                
+                        <table style="position:absolute;right:0px;width:640px;">
+                            <thead>
+                                <tr>
+                                    <td style="height:43px;">Количество</td>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @{
+
+                                    foreach (var c in ViewBag.FirstPrices)
+                                    {
+                                        <tr>
+
+                                            <td style="height:43px">@c.Count</td>
+
+                                        </tr>
+                                    }
+
+                                }
+
+                            </tbody>
+                        </table>
+                
+        </div>
+    </div>
+    <footer>
+        <div id="footer" name="Admin">
+            <a href="Edit"><input style="width:200px" class="buttonA" type="button" id="AdminButton" value="Добавление игры" /></a>
+        </div>
+        <div id="footer" name="Admin">
+            <a href="Orders"><input style="width:95px" class="buttonA" type="button" id="AdminButton" value="Заказы" /></a>
+        </div>
+    </footer>
+</body>
+</html>

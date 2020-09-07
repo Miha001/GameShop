@@ -1,0 +1,89 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="~/Home/Index" title="Перейти на главную"><span>Game</span>shop</a>
+        </div>
+        <div id="menuHead">
+            <a class="buttonA" style="width:72px;" href="~/Home/About">
+                О нас
+            </a>
+        </div>
+    </header>
+    <div>
+        <form action="" method="post">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Название игры</td>
+                        <td><input type="text" name="Name" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Категория</td>
+                        <td><select style="width:160px" name="categories">
+        <option  name="NameOfCategory" value="Гонки">Гонки</option>
+        <option  name="NameOfCategory" value="RPG">RPG</option>
+        <option name="NameOfCategory" value="Шутер">Шутер</option>
+        <option  name="NameOfCategory" value="Стратегия">Стратегия</option>
+        <option  name="NameOfCategory" value="MMO">MMo</option>
+            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Платформа</td>
+                        <td>
+                            <select  style="width:160px"name="platforms">
+                                <option style="width:100px" name="Platform" value="PC">PC</option>
+                                <option style="width:100px" name="Platform" value="PS4">PS4</option>
+                                <option style="width:100px" name="Platform" value="XBOX ONE">XBOX ONE</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Год производства</td>
+                        <td><input type="text" name="Year" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Цена по которой игра куплена</td>
+                        <td><input type="text" name="Price" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Цена по которой игра продается</td>
+                        <td><input type="text" name="SellingPrice" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Описание</td>
+                        <td><textarea name="Description"></textarea> </td>
+                    </tr>
+                    <tr>
+                        <td>Количество</td>
+                        <td><input type="text" name="Count" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Выберите изображение</td>
+                        <td><input type="file" name="ImageMimeType"></td>
+                       
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input class="buttonA" type="submit" value="Продолжить" /></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </form>
+    </div>
+    <footer></footer>
+</body>
+</html>

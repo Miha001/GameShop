@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>GameStore</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="~/Home/Index" title="Перейти на главную"><span>Game</span>shop</a>
+        </div>
+        <div id="menuHead">
+            <a class="buttonA" style="width:72px;" href="~/Home/About">
+                О нас
+            </a>
+        </div>
+        <div>
+            <div id="Cartid">
+                <a id="Cart" href="~/Cart/Index">
+                    <div class="buttonA" style="width:110px;margin-left:150px;margin-bottom:30%; ">Корзина</div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="leftCol">
+            @RenderBody()
+        </div>
+        <div id="categories">
+            <h3 style=" margin-left:60px;">Категории</h3>
+     <!--       <a><input class="buttonA" type="button" name="categories" value="Все категории" /></a>-->
+            @{
+                foreach (var item in ViewBag.Categories)
+                {
+                    <a><input style="width:200px" class="buttonA" type="button" name="categories" value="@item.NameOfCategory" /></a>
+                }
+            }
+        </div>
+    </div>
+    <footer>
+        <div id="footer" name="Admin">
+            <a href="~/Home/Goods"><input style="width:155px;" class="buttonA" type="button" id="AdminButton" value="Админ-панель" /></a>
+        </div>
+    </footer>
+</body>
+</html>

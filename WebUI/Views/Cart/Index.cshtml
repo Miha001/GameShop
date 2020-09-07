@@ -1,0 +1,64 @@
+﻿@model WebUI.Models.CartIndexViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ваша корзина</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="~/Home/Index" title="Перейти на главную"><span>Game</span>shop</a>
+        </div>
+        <div id="menuHead">
+            <a style="width:70px" class="buttonA" href="~/Home/About">
+                О нас
+
+            </a>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="leftCol">
+            <h3 style="margin-left:550px">Корзина</h3>
+            <br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Количество</th>
+                        <th>Наименование</th>
+                        <th>Цена</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var line in Model.Cart.Lines)
+                    {
+                        <tr>
+                            <td>@line.Quantity</td>
+                            <td>@line.Ch.Name</td>
+                            <td>@line.Ch.SellingPrice.ToString("# руб")</td>
+                            <td>@((line.Quantity * line.Ch.SellingPrice).ToString("# руб"))</td>
+                        </tr>
+                    }
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Итого:</td>
+                        <td>@Model.Cart.ComputeTotalValue().ToString("# руб")</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <a style="float:left;margin-top:40px;margin-left:450px;width:150px;height:40px" class="buttonA" href="~/Home/Index">Продолжить покупки</a>
+            <a style="float:left;margin-top:40px;width:110px;height:40px; " class="buttonA" href="~/Home/Index">Оплатить покупку</a>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>

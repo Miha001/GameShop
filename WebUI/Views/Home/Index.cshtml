@@ -1,0 +1,32 @@
+﻿@model Domain.Entities.Characteristic
+@{
+
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+            <h3 style="margin-left:40px;">Товары</h3>
+           
+           @{ 
+               foreach (var item in ViewBag.Characteristics)
+               {
+                   
+            <div id="card">
+                
+                <strong> Название: </strong>@item.Name<br/>
+                <strong> Описание: </strong>@item.Description <br />
+                <strong>Год издания: </strong>   @item.Year <br />
+                <strong> Цена: </strong> @item.SellingPrice.ToString("# руб") <br />
+
+                     
+                      @using (Html.BeginForm("AddToCart", "Cart"))
+                    {
+                          @Html.HiddenFor(x=>x.CharacteristicId)
+                  @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                    <input style="padding-right:0px ;width:120px; text-align: left; margin:0px 0px 0px 0px;" class="buttonA" type="submit" name="name" value="В корзину" />
+                      }
+</div> 
+               }
+          }
+

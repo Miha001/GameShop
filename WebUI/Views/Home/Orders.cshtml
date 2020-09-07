@@ -1,0 +1,86 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="~/Home/Index" title="Перейти на главную"><span>Game</span>shop</a>
+        </div>
+        <div id="menuHead">
+            <a class="buttonA" style="width:72px;" href="~/Home/About">
+                О нас
+            </a>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="leftCol">
+            <h3 style="margin-left:410px">Заказы</h3>
+            <br />
+            <table style="position:absolute;left:0px;width:200px;">
+                <thead>
+                    <tr>
+                        <td>Id заказа</td>
+                        <td>Дата заказа</td>
+                        <td>Статус заказа</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        foreach (var o in ViewBag.Orders)
+                        {
+                    <tr>
+                      
+                        <td>@o.OrderId</td>
+                        <td>@o.DateOfOrder</td>
+                        <td>@o.StatusOfOrder</td>
+
+                    </tr>
+                        }
+
+                    }
+
+                </tbody>
+            </table>
+
+            <table style="position:absolute;right:0px;width:858px;">
+                <thead>
+                    <tr>
+                        <td style="height:43px;">ФИО покупателя</td>
+                        <td style="height:43px;">Адрес</td>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @{
+
+                        foreach (var u in ViewBag.UserDatas)
+                        {
+                    <tr>
+                        <td >@u.NameOfUser</td>
+                        <td >@u.Addres</td>
+                    </tr>
+                        }
+
+                    }
+
+                </tbody>
+            </table>
+           
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            Все права защищены
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,231 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    
+}
+
+html {
+    height: 100%;
+}
+body,header,footer{
+    background-color:#e7e7e7;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+  
+    color: #333;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 1em;
+    line-height: 135%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* IE 8*/
+}
+
+a {
+    color: #d38484;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #efdea0;
+    }
+
+    a, a:havor {
+        -webkit-transition: all.6s ease;
+        -o-transition: all.6s ease;
+        -ms-transition: all.6s ease;
+        transition: all.6s ease;
+    }
+
+.clear {
+    clear: both;
+}
+/*Стили для шапки*/
+header {
+    height: 1px;
+    width: 94%;
+    float: left;
+    padding: 3%;
+
+    border-bottom: 2px solid red;
+    margin-bottom: 10px;
+}
+
+    header #logo {
+        width: 20%;
+        float: left;
+    }
+
+        header #logo a {
+            color: #d41b16;
+            font-size: 3.5em;
+            font-family: Times New Roman,sans-serif;
+        }
+
+        header #logo span {
+            color: #7b0606;
+            -webkit-text-stroke-width: 0px;
+            -webkit-text-stroke-color: black;
+        }
+
+    header #menuHead {
+        width: 44%;
+        float: left;
+    }
+
+        header #menuHead div {
+            float: left;
+            padding: 5px;
+            background-color: #c8c8c8;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+
+            header #menuHead div:hover {
+                background-color: #e7e7e7;
+            }
+
+/*Стили для всего документа*/
+#wrapper {
+    height: 450px;
+    width: 100%;
+    margin-left: 5%;
+    float: left;
+}
+/**Для левой*/
+#leftCol {
+    width: 70%;
+    margin-right: 0%;
+    float: left;
+}
+
+#categories {
+    width: 25%;
+    float:left;
+    margin-bottom: 20px;
+}
+/*Стили для Footer*/
+
+footer {
+    width: 98%;
+    float: left;
+    padding: 1%;
+  
+    border-top: 2px solid red;
+    margin-top: 10px;
+}
+
+#footer {
+    float: left;
+}
+
+#buttonA bout {
+    height: 17px;
+}
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 16px;
+    border-radius: 10px;
+    border-spacing: 0;
+    text-align: center;
+    padding-left: 400px;
+    
+}
+
+th {
+    background: red;
+    color: white;
+    text-shadow: 0 1px 1px #ffffff;
+    padding: 10px 20px;
+}
+
+th, td {
+    border-style: solid;
+    border-width: 1px 0px 0px 1px;
+    border-color: black;
+}
+
+    th:first-child, td:first-child {
+        text-align: left;
+    }
+
+    th:first-child {
+        border-top-left-radius: 10px;
+    }
+
+    th:last-child {
+        border-top-right-radius: 10px;
+        border-right: none;
+    }
+
+td {
+    padding: 10px 20px;
+    background: #d50b1f;
+    color:aliceblue;
+}
+
+tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+tr td:last-child {
+    border-right: none;
+}
+
+#card {
+    margin-top: 25px;
+    background: white;
+    padding-left: 15px;
+    padding-top: 15px;
+    width: 200px;
+    height: 200px;
+    border: solid silver 1px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px 1px #666;
+    
+}
+
+
+#Cart {
+    float: left;
+}
+
+
+
+
+.buttonA {
+    height:23px;
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    color: white;
+    padding-left: 15px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #d41b16 0%, #9a0c0c 51%, #1f4593 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    transition: .5s;
+}
+
+    .buttonA:hover {
+        background-position: right center;
+    }
